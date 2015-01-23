@@ -478,6 +478,7 @@ public class IR1Interp {
     //  Dest rdst;
     //
     static int execute(IR1.Call n) throws Exception {
+        envFunc = new Env();
         if (n.name.equals("malloc")) {
             Integer currentSize = heap.size();
             heap = new ArrayList<Val>();
@@ -486,6 +487,9 @@ public class IR1Interp {
             }
             env.addTemp(((IR1.Temp) n.rdst).num, new IntVal(currentSize));
             return currentSize;
+        }
+        if (!funcMap.isEmpty() && funcMap.get(n.name)!= null){
+            
         }
 
         printArgs(n);
@@ -514,28 +518,6 @@ public class IR1Interp {
         }
     }
 
-
-    /*static void printArgs(IR1.Call n) {
-        if (env.getVar(n.args[0].toString()) != null) {
-            System.out.println(env.getVar(n.args[0].toString()));
-        } else if(env.getTemp(((IR1.Temp) n.args[0]).num) != null ){
-            System.out.println(env.getTemp(((IR1.Temp) n.args[0]).num));
-        }
-        else {
-
-            if (n.name.equals("printStr")) {
-                if (n.args.length == 0) {
-                    System.out.println();
-                } else {
-                    System.out.println(n.args[0].toString().substring(1, n.args[0].toString().length() - 1));
-                }
-            }
-            if (n.name.equals("printInt")) {
-                System.out.println(n.args[0]);
-            }
-        }
-    }
-*/
     // Return ---
     //  Src val;
     //
