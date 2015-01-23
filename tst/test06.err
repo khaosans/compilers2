@@ -1,1 +1,7 @@
-Error: Could not find or load main class IR1Interp
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at IR1Interp.printArgs(IR1Interp.java:497)
+	at IR1Interp.execute(IR1Interp.java:491)
+	at IR1Interp.execute(IR1Interp.java:247)
+	at IR1Interp.execute(IR1Interp.java:227)
+	at IR1Interp.execute(IR1Interp.java:203)
+	at IR1Interp.main(IR1Interp.java:179)

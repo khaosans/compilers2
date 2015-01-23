@@ -146,7 +146,7 @@ public class IR1Interp {
     // - for handling 'malloc'ed data
     // - you need to define alloc and access methods for it
     //
-    static ArrayList<Val> heap;
+    static ArrayList<Val> heap = new ArrayList<Val>();
 
     // Return value
     // - for passing return value from callee to caller
@@ -370,7 +370,13 @@ public class IR1Interp {
     //  Addr addr;
     //
     static int execute(IR1.Load n) throws Exception {
-        // ... code needed ...
+        int dst = evaluate(n.addr);
+        if (n.dst instanceof IR1.Id) {
+            env.addVar((((IR1.Id) n.dst)).name, new IntVal(dst));
+        }
+        if (n.dst instanceof IR1.Temp) {
+            env.addTemp((((IR1.Temp) n.dst)).num, new IntVal(dst));
+        }
         return CONTINUE;
     }
 
@@ -379,7 +385,12 @@ public class IR1Interp {
     //  Src src;
     //
     static int execute(IR1.Store n) throws Exception {
-
+        int tempIndx = ((IR1.Temp) n.addr.base).num;
+        Val tempVal = env.getTemp(tempIndx);
+        if (tempVal instanceof IntVal) {
+            int heapIdx = Integer.parseInt(tempVal.toString());
+            heap.add(heapIdx, evaluate(n.src));
+        }
         return CONTINUE;
     }
 
@@ -456,6 +467,7 @@ public class IR1Interp {
     static int execute(IR1.Jump n) throws Exception {
 
         // ... code needed ...
+        //return address
         return -1;
 
     }
@@ -466,7 +478,15 @@ public class IR1Interp {
     //  Dest rdst;
     //
     static int execute(IR1.Call n) throws Exception {
-
+        if (n.name.equals("malloc")) {
+            Integer currentSize = heap.size();
+            heap = new ArrayList<Val>();
+            for (int i = 0; i < Integer.parseInt(n.args[0].toString()); ++i) {
+                heap.add(null);
+            }
+            env.addTemp(((IR1.Temp) n.rdst).num, new IntVal(currentSize));
+            return currentSize;
+        }
 
         printArgs(n);
 
@@ -474,9 +494,34 @@ public class IR1Interp {
     }
 
     static void printArgs(IR1.Call n) {
+        if (n.args.length !=0 && n.args[0] instanceof IR1.StrLit) {
+            System.out.println(n.args[0].toString().substring(1, n.args[0].toString().length() - 1));
+        }
+        if (n.args.length !=0 && n.args[0] instanceof IR1.IntLit) {
+            System.out.println(n.args[0]);
+        }
+        if (n.args.length != 0 && n.args[0] instanceof IR1.BoolLit){
+            System.out.println(n.args[0]);
+        }
+        if(n.args.length != 0 && n.args[0] instanceof IR1.Id){
+            System.out.println(env.getVar(n.args[0].toString()));
+        }
+        if(n.args.length != 0 && n.args[0] instanceof IR1.Temp){
+            System.out.println(env.getTemp(((IR1.Temp) n.args[0]).num));
+        }
+        if(n.name.equals("printStr") && n.args.length ==0){
+            System.out.println();
+        }
+    }
+
+
+    /*static void printArgs(IR1.Call n) {
         if (env.getVar(n.args[0].toString()) != null) {
             System.out.println(env.getVar(n.args[0].toString()));
-        } else {
+        } else if(env.getTemp(((IR1.Temp) n.args[0]).num) != null ){
+            System.out.println(env.getTemp(((IR1.Temp) n.args[0]).num));
+        }
+        else {
 
             if (n.name.equals("printStr")) {
                 if (n.args.length == 0) {
@@ -490,7 +535,7 @@ public class IR1Interp {
             }
         }
     }
-
+*/
     // Return ---
     //  Src val;
     //
@@ -511,10 +556,13 @@ public class IR1Interp {
     //  Src base;
     //  int offset;
     //
-    static int evalute(IR1.Addr n) throws Exception {
+    static int evaluate(IR1.Addr n) throws Exception {
+        Val addrValObj = env.getTemp(((IR1.Temp) n.base).num);
+        int addrVal = Integer.parseInt(addrValObj.toString());
 
-        // ... code needed ...
-        return 1;
+        int heapVal = Integer.parseInt(heap.get(addrVal).toString());
+        return heapVal;
+
 
     }
 
@@ -540,5 +588,6 @@ public class IR1Interp {
         // if (n instanceof IR1.Id)   val =
         return val;
     }
+
 
 }

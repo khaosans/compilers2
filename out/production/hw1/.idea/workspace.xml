@@ -55,25 +55,7 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/IR1Interp.java" line="306" class="IR1Interp" package="">
-        <option name="WATCH_ENTRY" value="true" />
-        <option name="WATCH_EXIT" value="true" />
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </method_breakpoints>
+    <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -83,14 +65,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IR1Interp.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="IR1Interp.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IR1Interp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="306" column="0" selection-start="8403" selection-end="8403" vertical-scroll-proportion="0.5078125" vertical-offset="5118" max-vertical-offset="7722">
+            <state line="309" column="13" selection-start="9392" selection-end="9392" vertical-scroll-proportion="0.0" vertical-offset="5058" max-vertical-offset="9900">
               <folding>
-                <element signature="e#0#11368#0" expanded="true" />
+                <element signature="e#0#16098#0" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="e#2168#2185#0" expanded="true" />
+                <element signature="e#2256#2270#0" expanded="true" />
+                <element signature="e#2342#2355#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test03.out.ref" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tst/test03.out.ref">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="144">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test04.ir" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tst/test04.ir">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="12" selection-start="154" selection-end="154" vertical-scroll-proportion="0.328125" vertical-offset="0" max-vertical-offset="768">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IR1.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ir1/IR1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="23" selection-start="637" selection-end="641" vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="5886">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,7 +110,7 @@
       <file leaf-file-name="test03.ir" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tst/test03.ir">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="10" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="576">
+            <state line="13" column="3" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="576">
               <folding />
             </state>
           </provider>
@@ -174,6 +186,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hw1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hw1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tst" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -196,7 +222,7 @@
     <configuration default="false" name="IR1Interp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="IR1Interp" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="tst/test03.ir" />
+      <option name="PROGRAM_PARAMETERS" value="tst/test04.ir" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -249,19 +275,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -287,6 +300,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -374,7 +400,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32957393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.320802" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36215538" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -416,10 +442,54 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/IR1Interp.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="309" column="13" selection-start="9392" selection-end="9392" vertical-scroll-proportion="0.0" vertical-offset="5058" max-vertical-offset="9900">
+          <folding>
+            <element signature="e#0#16098#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2168#2185#0" expanded="true" />
+            <element signature="e#2256#2270#0" expanded="true" />
+            <element signature="e#2342#2355#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tst/test03.out.ref">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="144">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tst/test04.ir">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="12" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="522">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ir1/IR1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="23" selection-start="637" selection-end="641" vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="5886">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tst/test03.ir">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="3" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="576">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IR1Interp.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="306" column="0" selection-start="8403" selection-end="8403" vertical-scroll-proportion="0.0" vertical-offset="7240" max-vertical-offset="7722">
           <folding>
-            <element signature="e#0#11368#0" expanded="true" />
+            <element signature="e#0#16098#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#2168#2185#0" expanded="true" />
+            <element signature="e#2256#2270#0" expanded="true" />
+            <element signature="e#2342#2355#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -435,15 +505,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="120" column="33" selection-start="2841" selection-end="2841" vertical-scroll-proportion="0.0" vertical-offset="6534" max-vertical-offset="7272">
           <folding>
-            <element signature="e#0#11368#0" expanded="true" />
+            <element signature="e#0#16098#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#2168#2185#0" expanded="true" />
+            <element signature="e#2256#2270#0" expanded="true" />
+            <element signature="e#2342#2355#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tst/test04.ir">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="9" selection-start="86" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="522" />
+        <state line="9" column="9" selection-start="86" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="522">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tst/test01.ir">
@@ -487,8 +562,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="21" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.0" vertical-offset="2052" max-vertical-offset="6750">
           <folding>
-            <element signature="e#0#11368#0" expanded="true" />
+            <element signature="e#0#16098#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#2168#2185#0" expanded="true" />
+            <element signature="e#2256#2270#0" expanded="true" />
+            <element signature="e#2342#2355#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -514,8 +592,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="21" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.0" vertical-offset="2052" max-vertical-offset="6750">
           <folding>
-            <element signature="e#0#11368#0" expanded="true" />
+            <element signature="e#0#16098#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#2168#2185#0" expanded="true" />
+            <element signature="e#2256#2270#0" expanded="true" />
+            <element signature="e#2342#2355#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -541,8 +622,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="25" selection-start="601" selection-end="604" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="6750">
           <folding>
-            <element signature="e#0#11368#0" expanded="true" />
+            <element signature="e#0#16098#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#2168#2185#0" expanded="true" />
+            <element signature="e#2256#2270#0" expanded="true" />
+            <element signature="e#2342#2355#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -552,11 +636,6 @@
         <state line="87" column="26" selection-start="2246" selection-end="2250" vertical-scroll-proportion="0.0" vertical-offset="1566" max-vertical-offset="5886">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tst/test03.out.diff">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="505" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tst/test04.out.diff">
@@ -577,13 +656,6 @@
     <entry file="file://$PROJECT_DIR$/tst/hello.out.ref">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="768" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ir1/IR1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="246" column="19" selection-start="5935" selection-end="5935" vertical-scroll-proportion="5.0520835" vertical-offset="440" max-vertical-offset="5778">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tst/hello.ir">
@@ -616,11 +688,6 @@
         <state line="6" column="0" selection-start="70" selection-end="87" vertical-scroll-proportion="0.21386139" vertical-offset="0" max-vertical-offset="505" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tst/test04.ir">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="9" selection-start="86" selection-end="94" vertical-scroll-proportion="0.32079208" vertical-offset="0" max-vertical-offset="522" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tst/test06.ir">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630" />
@@ -631,30 +698,51 @@
         <state line="11" column="8" selection-start="37" selection-end="125" vertical-scroll-proportion="0.3920792" vertical-offset="0" max-vertical-offset="505" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tst/test03.err">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="505" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ir1/ir1Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="894" column="0" selection-start="24307" selection-end="24307" vertical-scroll-proportion="0.33266532" vertical-offset="15908" max-vertical-offset="18162" />
+        <state line="894" column="0" selection-start="24307" selection-end="24307" vertical-scroll-proportion="0.33266532" vertical-offset="15908" max-vertical-offset="18162">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ir1/IR1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="23" selection-start="637" selection-end="641" vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="5886">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tst/test03.ir">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="10" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
+        <state line="13" column="3" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tst/test03.out.ref">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IR1Interp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="306" column="0" selection-start="8403" selection-end="8403" vertical-scroll-proportion="0.5078125" vertical-offset="5118" max-vertical-offset="7722">
+        <state line="309" column="13" selection-start="9392" selection-end="9392" vertical-scroll-proportion="0.0" vertical-offset="5058" max-vertical-offset="9900">
           <folding>
-            <element signature="e#0#11368#0" expanded="true" />
+            <element signature="e#0#16098#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#2168#2185#0" expanded="true" />
+            <element signature="e#2256#2270#0" expanded="true" />
+            <element signature="e#2342#2355#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tst/test04.ir">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="12" selection-start="154" selection-end="154" vertical-scroll-proportion="0.328125" vertical-offset="0" max-vertical-offset="768">
+          <folding />
         </state>
       </provider>
     </entry>
