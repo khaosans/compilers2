@@ -478,7 +478,6 @@ public class IR1Interp {
     //  Dest rdst;
     //
     static int execute(IR1.Call n) throws Exception {
-        envFunc = new Env();
         if (n.name.equals("malloc")) {
             Integer currentSize = heap.size();
             heap = new ArrayList<Val>();
@@ -489,7 +488,26 @@ public class IR1Interp {
             return currentSize;
         }
         if (!funcMap.isEmpty() && funcMap.get(n.name)!= null){
-            
+            envFunc = new Env();
+            IR1.Func func = funcMap.get(n.name);
+            IR1.Inst [] inst = func.code;
+            for (IR1.Inst i : inst){
+                if(((IR1.Call) i).name.equals("malloc") ){
+                    Integer currentSize = heap.size();
+                    heap = new ArrayList<Val>();
+                    for (int j = 0; j < Integer.parseInt(n.args[0].toString()); ++j) {
+                        heap.add(null);
+                    }
+                    env.addTemp(((IR1.Temp) n.rdst).num, new IntVal(currentSize));
+                    return currentSize;
+                }
+                if(((IR1.Call) i).rdst instanceof IR1.Id){
+                    envFunc.addVar( ((IR1.Id) ((IR1.Call) i).rdst).name, evaluate(((IR1.Call) i).args[0]));
+                }
+                if(((IR1.Call) i).rdst instanceof IR1.Temp){
+                    envFunc.addTemp(((IR1.Temp) ((IR1.Call) i).rdst).num, evaluate(((IR1.Call) i).args[0]));
+                }
+            }
         }
 
         printArgs(n);
@@ -522,9 +540,7 @@ public class IR1Interp {
     //  Src val;
     //
     static int execute(IR1.Return n) throws Exception {
-
-        // ... code needed ...
-
+        retVal = evaluate(n.val);
         return RETURN;
     }
 
